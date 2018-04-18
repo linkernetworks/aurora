@@ -2,21 +2,21 @@
 
 version=v1.0
 
-platform='unknown'
+platform=unknown
 
-if [[ $(uname) == 'Linux' ]]; then
-   platform='linux'
-elif [[ $(uname) == 'Darwin' ]]; then
-   platform='darwin'
+if [ "$(uname)" == "Linux" ]; then
+   platform=linux
+elif [ "$(uname)" == "Darwin" ]; then
+   platform=darwin
 fi
 
 file=aiforge-${version}-${platform}-amd64.tgz
 download_url=https://github.com/linkernetworks/aiforge-release/releases/download/${version}/${file}
 
-echo $file $download_url
+echo "Downloading $download_url ..."
 
-curl -o $file -sSL $download_url
+curl -sSL $download_url -o $file
 
-tar -xzvf $file -C /usr/local/bin/
+tar -xzf $file -C /usr/local/bin/
 
 rm $file
