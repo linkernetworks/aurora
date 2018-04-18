@@ -6,12 +6,12 @@ This repo contains the released binaries of Job submit tool - aiforge.
 For Linux, macOS
 
 ```
-curl https://raw.githubusercontent.com/linkernetworks/aiforge/master/install.sh | bash
+$ curl https://raw.githubusercontent.com/linkernetworks/aiforge/master/install.sh | bash
 ```
 
 # Usage
 ## Display commands and help
-**aiforge --help**
+**$ aiforge --help**
 ```
 Usage:
   aiforge [command]
@@ -29,7 +29,7 @@ Use "aiforge [command] --help" for more information about a command.
 ```
 
 ## Display help of a command
-**aiforge submit --help**
+**$ aiforge submit --help**
 ```
 Submit py/ipynb file to job server
 
@@ -48,7 +48,7 @@ Global Flags:
 ```
 
 ## Submit Job
-**aiforge submit -f notebooks/example-tensorflow.ipynb -e tf13**
+**$ aiforge submit -f notebooks/example-tensorflow.ipynb -e tf13**
 ```
 Submitting 'notebooks/example-tensorflow14.ipynb' to 'jobserver.default:50051'...
 Job created: https://some.aurora-hostname.com/#/jobs/view/5ad6e551e60eb60001cc3556
