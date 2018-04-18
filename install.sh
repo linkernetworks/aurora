@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 version=v1.0
 
