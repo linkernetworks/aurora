@@ -4,7 +4,7 @@ version=v1.0
 
 platform=unknown
 
-bindir=/usr/local/bin/
+bindir=/usr/local/bin
 
 if [ "$(uname)" == "Linux" ]; then
    platform=linux
@@ -19,8 +19,8 @@ echo "Downloading $download_url ..."
 
 curl -sSL $download_url -o $file
 
-tar -xzf $file -C $bindir
+tar -xzf $file -C $bindir/
 
 rm $file
 
-echo "Installed to $bindir/aiforge, type 'aiforge --help' to start"
+echo "Installed to ${bindir}/aiforge, type 'aiforge --help' to start"
