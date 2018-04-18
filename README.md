@@ -6,7 +6,13 @@ This repo contains the released binaries of Job submit tool - aiforge.
 For Linux, macOS
 
 ```
-$ curl https://raw.githubusercontent.com/linkernetworks/aiforge/master/install.sh | bash
+wget https://raw.githubusercontent.com/linkernetworks/aiforge/master/install.sh -O - | bash
+```
+
+or
+
+```
+curl https://raw.githubusercontent.com/linkernetworks/aiforge/master/install.sh | bash
 ```
 
 # Usage
