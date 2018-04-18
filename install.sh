@@ -4,6 +4,8 @@ version=v1.0
 
 platform=unknown
 
+bindir=/usr/local/bin/
+
 if [ "$(uname)" == "Linux" ]; then
    platform=linux
 elif [ "$(uname)" == "Darwin" ]; then
@@ -17,6 +19,8 @@ echo "Downloading $download_url ..."
 
 curl -sSL $download_url -o $file
 
-tar -xzf $file -C /usr/local/bin/
+tar -xzf $file -C $bindir
 
 rm $file
+
+echo "Installed to $bindir/aiforge, type 'aiforge --help' to start"
