@@ -17,7 +17,11 @@ download_url=https://github.com/linkernetworks/aiforge/releases/download/${versi
 
 echo "Downloading $download_url ..."
 
-curl -sSL $download_url -o $file
+if [ -x "$(command -v curl)" ]; then
+    curl -sSL $download_url -o $file
+elif [ -x "$(command -v wget)" ]; then
+    wget $download_url -O $file
+fi
 
 tar -xzf $file -C $bindir/
 
