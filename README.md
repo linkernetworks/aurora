@@ -1,26 +1,26 @@
 # Summary
-This repo contains the released binaries of Job submit tool - aiforge.
+This repo contains the released binaries of Job submit tool - aurora.
 
 # Download and install
 
 For Linux, macOS
 
 ```
-wget https://raw.githubusercontent.com/linkernetworks/aiforge/master/install.sh -O - | bash
+wget https://raw.githubusercontent.com/linkernetworks/aurora/master/install.sh -O - | bash
 ```
 
 or
 
 ```
-curl https://raw.githubusercontent.com/linkernetworks/aiforge/master/install.sh | bash
+curl https://raw.githubusercontent.com/linkernetworks/aurora/master/install.sh | bash
 ```
 
 # Usage
 ## Display commands and help
-**$ aiforge --help**
+**$ aurora --help**
 ```
 Usage:
-  aiforge [command]
+  aurora [command]
 
 Available Commands:
   help        Help about any command
@@ -28,19 +28,19 @@ Available Commands:
   version     Show the version information
 
 Flags:
-  -h, --help            help for aiforge
+  -h, --help            help for aurora
   -s, --server string   Address of JobServer (default "jobserver.default:50051")
 
-Use "aiforge [command] --help" for more information about a command.
+Use "aurora [command] --help" for more information about a command.
 ```
 
 ## Display help of a command
-**$ aiforge submit --help**
+**$ aurora submit --help**
 ```
 Submit py/ipynb file to job server
 
 Usage:
-  aiforge submit [flags]
+  aurora submit [flags]
 
 Flags:
   -e, --environment string   Environment (tf13, tf14, tf15, tf16, caffe, pytorch, mxnet)
@@ -54,20 +54,20 @@ Global Flags:
 ```
 
 ## Submit Job
-**$ aiforge submit -f notebooks/example-tensorflow.ipynb -e tf13**
+**$ aurora submit -f notebooks/example-tensorflow.ipynb -e tf13**
 ```
 Submitting 'notebooks/example-tensorflow14.ipynb' to 'jobserver.default:50051'...
 Job created: https://some.aurora-hostname.com/#/jobs/view/5ad6e551e60eb60001cc3556
 ```
 
 Currently, the submit command only support py/ipynb files under `/workspace/notebooks/`,
-and the `aiforge submit` command must be executed in `/workspace`.
+and the `aurora submit` command must be executed in `/workspace`.
 
 Choose the environment by `-e` argument, it can be one of `tf13`, `tf14`,
 `tf15`, `tf16`, `caffe`, `pytorch`, `mxnet`.
 
 ## Show build reversions
-**$ aiforge version**
+**$ aurora version**
 ```
 Release Version: develop
 Build Number:
