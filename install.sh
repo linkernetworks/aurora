@@ -13,7 +13,7 @@ elif [ "$(uname)" == "Darwin" ]; then
 fi
 
 file=aiforge-${version}-${platform}-amd64.tgz
-download_url=https://github.com/linkernetworks/aiforge/releases/download/${version}/${file}
+download_url=https://github.com/linkernetworks/aurora/releases/download/${version}/${file}
 
 echo "Downloading $download_url ..."
 
@@ -27,4 +27,4 @@ tar -xzf $file -C $bindir/
 
 rm $file
 
-echo "Installed to ${bindir}/aiforge, type 'aiforge --help' to start"
+echo "Installed to ${bindir}/aurora, type 'aurora --help' to start"
