@@ -1,10 +1,10 @@
 #!/bin/bash
 
-version=v1.0.4
+branch=develop
 
 platform=unknown
 
-bindir=/usr/local/bin
+installdir=/usr/local/bin
 
 if [ "$(uname)" == "Linux" ]; then
    platform=linux
@@ -12,8 +12,8 @@ elif [ "$(uname)" == "Darwin" ]; then
    platform=darwin
 fi
 
-file=aiforge-${version}-${platform}-amd64.tgz
-download_url=https://github.com/linkernetworks/aurora/releases/download/${version}/${file}
+file=aurora-${platform}-amd64.tgz
+download_url=https://storage.googleapis.com/aurora-releases/branch/$branch/$file
 
 echo "Downloading $download_url ..."
 
@@ -23,8 +23,8 @@ elif [ -x "$(command -v wget)" ]; then
     wget $download_url -O $file
 fi
 
-tar -xzf $file -C $bindir/
+tar -xzf $file -C $installdir/
 
 rm $file
 
-echo "Installed to ${bindir}/aurora, type 'aurora --help' to start"
+echo "Installed to ${installdir}/aurora, type 'aurora --help' to start"
